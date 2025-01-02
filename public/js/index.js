@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) =>{
     console.log(search.value);
     msg1.innerHTML = "Loading"
     msg2.innerHTML = '';
-    fetch(`http://localhost:3000/weather?location=${search.value}`).then((response) => {
+    fetch(`/weather?location=${search.value}`).then((response) => {
         response.json().then((data) => {
             msg1.innerHTML = '';
             if(data.error) msg2.innerHTML = (data.error);
